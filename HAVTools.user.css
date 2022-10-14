@@ -6,7 +6,7 @@
 @preprocessor	stylus
 ==/UserStyle== */
 
-@-moz-document domain("havtools.com")
+@document domain("havtools.com")
 {
 	body {
 		background: #0054a6!important;
