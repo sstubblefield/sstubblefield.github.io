@@ -1,0 +1,105 @@
+/* ==UserStyle==
+@name			HAVTools
+@author			Cascadea User
+@version		1.0.0
+@namespace		cascadea2705191282
+@preprocessor	stylus
+==/UserStyle== */
+
+@-moz-document domain("havtools.com")
+{
+	body {
+		background: #0054a6!important;
+		color: #fff;
+		padding: 0;
+		margin: 0;
+	
+		table {
+			width: 100% !important;
+		}
+		
+		.body11 {
+			background: none;
+		}
+		
+		> .body12 {
+			width: 100%;
+			background: none;
+			
+			> tbody {
+				> tr:nth-child(1) {
+					td {
+						height: 83px;
+						background: #fff center 10px url('https://cdn.branchcms.com/6QNAJ3ZRPG-704/layout/images/interior-logo.png') no-repeat;
+						background-size: auto 83px;
+						padding: 10px 0;
+		
+						> img {
+							opacity: 0;
+						}
+					}
+				}
+				
+				> tr:nth-child(2) {
+					> td:nth-child(1) {
+						padding: 0 20px;
+					}
+				}
+			}
+		}
+	}
+	
+	a {
+		color: #4c87c0;
+	}
+	
+	img[width="650"] {
+		display: none;
+	}
+	
+	#form {
+		> table {
+			width: 100%;
+			background: none;
+			
+			> tbody {
+				tr:nth-child(3),
+				tr:nth-child(4) {
+	
+					> td:nth-child(1),
+					> td:nth-child(4) {
+						display: none;
+					}
+					
+					> td:nth-child(2),
+					> td:nth-child(3){
+						display: block;
+						width: 100%;
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+	
+	#PWord,
+	#UName {
+		display: block;
+		width: 100%;
+		height: 20px;
+		padding: 5px;
+		margin: 10px 0 0;
+	}
+	
+	#Submit {
+		display: inline-block;
+		background-image: none !important;
+		background: #4c87c0;
+		color: #fff;
+		width: 100%;
+		height: 30px;
+		text-align: center;
+		vertical-align: middle;
+	}
+	// body > table > tbody > tr:nth-child(1) > td > img
+}
