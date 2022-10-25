@@ -7,8 +7,6 @@ body {
 body table {
   width: 100% !important;
 }
-#hdr1 {
-display: none;}
 body .body11 {
   background: none;
 }
@@ -16,9 +14,7 @@ body > .body12 {
   width: 100%;
   background: none;
 }
-#headerLogo {
-  display: block;
-  width: 100%;
+body.default.asp > .body12 > tbody > tr:nth-child(1) td {
   height: 83px;
   background: #fff center 10px url("https://cdn.branchcms.com/6QNAJ3ZRPG-704/layout/images/interior-logo.png") no-repeat;
   background-size: auto 83px;
@@ -74,17 +70,121 @@ img[width="650"] {
 }
 
 #nav-outside {
-    position: relative;
+	transition: transform 0.3s ease 250ms ease-in-out 0s;
+	-moz-transition: transform 0.3s ease 250ms ease-in-out 0s;
+	-webkit-transition: transform 0.3s ease 250ms ease-in-out 0s;
+	-o-transition: transform 0.3s ease 250ms ease-in-out 0s;
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 80%;
 }
 
-#nav-container {
-    position: absolute;
-    right: -100%;
+#nav-outside #nav-container > ul > li {
+	border-bottom: 1px solid #ddd;
+	font-size: 14px;
 }
+
+#nav-outside #nav-container > ul > li > h4 {
+	position: relative;
+	padding: 15px 10px;
+	font-size: 15px;
+	margin-bottom: 0;
+}
+
+#nav-outside #nav-container > ul > li > h4[data-ur-state="enabled"] {
+	font-weight: bold;
+}
+
+#nav-outside #nav-container > ul > li > h4:after {
+	position: absolute;
+	right: 15px;
+	content: "\f067";
+	font-family: "FontAwesome";
+}
+
+#nav-outside #nav-container > ul > li > h4[data-ur-state="enabled"]:after {
+	content: "\f068";
+}
+
+#nav-outside #nav-container > ul > li > ul a {
+	position: relative;
+	display: block;
+	padding: 15px 10px;
+	background-color: #fafafa;
+	color: inherit;
+	font-family: inherit;
+}
+
+#nav-outside #nav-container > ul > li > ul a:after {
+	position: absolute;
+	right: 15px;
+	font-family: "FontAwesome";
+	content: "\f054";
+}
+
+#nav-outside #nav-container > ul > li > ul a img {
+	display: none;
+}
+
+body.nav-open #nav-outside {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+	z-index: 110;
+}
+
+body.nav-open #overlay {
+	opacity: 1;
+	z-index: 100;
+}
+
+body.nav-open #overlay:after {
+	-webkit-transform: translateX(calc(60% + 10px));
+	-moz-transform: translateX(calc(60% + 10px));
+	-ms-transform: translateX(calc(60% + 10px));
+	-o-transform: translateX(calc(60% + 10px));
+	transform: translateX(calc(60% + 10px));
+}
+
+body.nav-transitioning #nav-outside {
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+body.nav-transitioning #overlay {
+	transition: opacity 0.3s ease 250ms ease-in-out 0s;
+	-moz-transition: opacity 0.3s ease 250ms ease-in-out 0s;
+	-webkit-transition: opacity 0.3s ease 250ms ease-in-out 0s;
+	-o-transition: opacity 0.3s ease 250ms ease-in-out 0s;
+	opacity: 0;
+	z-index: 100;
+}
+
+body.nav-transitioning #overlay:after {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+}
+
+
 #nav-button-wrapper {
     position: absolute;
     top: 30px;
-    right: 0;
+    right: 30px;
+    z-index: 100;
 }
 
 #nav-button-wrapper button {
@@ -99,4 +199,22 @@ img[width="650"] {
     margin: 0;
     height: 50px;
     width: 50px;
+}
+
+#nav-container ul {
+    margin: 0;
+    padding: 0;
+}
+.nav-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+.nav-item > a {
+    display: block;
+    background: #fff;
+    text-decoration: none;
+    padding: 10px;
 }
