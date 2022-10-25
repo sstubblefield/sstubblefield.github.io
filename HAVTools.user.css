@@ -14,7 +14,7 @@ body > .body12 {
   width: 100%;
   background: none;
 }
-body.default.asp > .body12 > tbody > tr:nth-child(1) td {
+#headerLogo {
   height: 83px;
   background: #fff center 10px url("https://cdn.branchcms.com/6QNAJ3ZRPG-704/layout/images/interior-logo.png") no-repeat;
   background-size: auto 83px;
