@@ -15,10 +15,13 @@ body > .body12 {
   background: none;
 }
 #headerLogo {
+  display: block;
   height: 83px;
   background: #fff center 10px url("https://cdn.branchcms.com/6QNAJ3ZRPG-704/layout/images/interior-logo.png") no-repeat;
   background-size: auto 83px;
-  padding: 10px 0;
+  padding: 0;
+  text-indent: -999em;
+  overflow: hidden;
 }
 body.default.asp > .body12 > tbody > tr:nth-child(1) td > img {
   opacity: 0;
@@ -218,3 +221,4 @@ body.nav-transitioning #overlay:after {
     text-decoration: none;
     padding: 10px;
 }
+
